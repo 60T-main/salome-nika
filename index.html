@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>სალომე & ნიკა</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    </head>
+    <body>
+        <!-- MOBILE PROMPT -->
+        <div class="mobile-prompt" id="mobile-prompt">
+            <img src="weddsite.png" alt="Weddsite" class="mobile-prompt-logo">
+            <h2 class="mobile-prompt-title">სალომე & ნიკა</h2>
+            <p class="mobile-prompt-text">
+                მოწვევა შექმნილია მობილური მოწყობილობისთვის.
+                <br>
+                გთხოვთ, გახსენით ტელეფონიდან.
+            </p>
+            <p class="mobile-prompt-date">16 მაისი, 2026</p>
+        </div>
+        <button class="day-night-toggle" id="day-night-toggle" aria-label="დღე/ღამე">
+            <span class="toggle-knob"></span>
+        </button>
+        <main class="page">
+            <div class="page-content" id="page-contents">
+                <!-- HERO -->
+                <section class="hero" id="top">
+                    <div class="hero-bg day"></div>
+                    <div class="hero-bg night"></div>
+                    <div class="hero-photo" aria-label="ფოტოს ადგილი">
+                        <img src="couple2.png" alt="">
+                    </div>
+                    <h1 class="hero-names">
+                        სალომე
+                        <span class="amp">&amp;</span>
+                        ნიკა
+                    </h1>
+                    <p class="hero-date">16 მაისი, 2026</p>
+                    <p class="hero-location">თბილისი, საქართველო</p>
+                    <a href="#rsvp" class="hero-cta">დაადასტურეთ დასწრება</a>
+                </section>
+                <!-- NAVBAR -->
+                <nav class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav-links">
+                            <li>
+                                <a href="#top">მთავარი</a>
+                            </li>
+                            <li>
+                                <a href="#timeline">დღის გეგმა</a>
+                            </li>
+                            <li>
+                                <a href="#rsvp">დადასტურება</a>
+                            </li>
+                            <li>
+                                <a href="#location">ლოკაცია</a>
+                            </li>
+                        </ul>
+                        <button class="hamburger" id="hamburger" aria-label="მენიუ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+                <!-- COUNTDOWN -->
+                <section class="countdown-section">
+                    <div class="reveal">
+                        <p class="section-label">ქორწილამდე დარჩა</p>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="countdown-boxes reveal" id="countdown">
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="cd-days">--</span>
+                            <span class="countdown-label">დღე</span>
+                        </div>
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="cd-hours">--</span>
+                            <span class="countdown-label">საათი</span>
+                        </div>
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="cd-minutes">--</span>
+                            <span class="countdown-label">წუთი</span>
+                        </div>
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="cd-seconds">--</span>
+                            <span class="countdown-label">წამი</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Mobile menu overlay -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="დახურვა">&#x2715;</button>
+                    <a href="#top">მთავარი</a>
+                    <a href="#timeline">დღის გეგმა</a>
+                    <a href="#rsvp">დადასტურება</a>
+                    <a href="#location">ლოკაცია</a>
+                </div>
+                <!-- MESSAGE FROM US -->
+                <section class="message-section">
+                    <div class="reveal">
+                        <p class="section-label">გეპატიჟებით</p>
+                        <div class="section-divider"></div>
+                        <h2>ძვირფასო სტუმრებო</h2>
+                    </div>
+                    <div class="reveal">
+                        <p>
+                            არის დღეები, რომლებიც მთელ ცხოვრებას ცვლიან. ჩვენი სიყვარულის ისტორიაში ყველაზე ლამაზი ფურცელი სწორედ ახლა იწერება და გვეამაყება, რომ ამ წუთების მოწმე თქვენ იქნებით.
+                        </p>
+                        <p>
+                            გვინდა, ეს დღე მხოლოდ ჩვენი კი არა, იმ ადამიანების დღესასწაულიც იყოს, ვინც გვიყვარს და ვინც ჩვენს ბედნიერებას ყოველთვის გულწრფელად იზიარებდა. მოდით, ერთად ვაქციოთ ეს საღამო დაუვიწყარ მოგონებად.
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <p class="message-signature">სიყვარულით, სალომე & ნიკა</p>
+                    </div>
+                </section>
+                <!-- TIMELINE / STEPS -->
+                <section class="timeline-section" id="timeline">
+                    <div class="reveal">
+                        <p class="section-label">დღის გეგმა</p>
+                        <div class="section-divider"></div>
+                        <h2 class="section-heading">ჩვენი განსაკუთრებული დღე</h2>
+                    </div>
+                    <div class="timeline">
+                        <!-- Step 1 -->
+                        <div class="timeline-step reveal">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-card" data-popup="1">
+                                <h3>ჯვრისწერა</h3>
+                                <p class="card-location">
+                                    <svg
+                                        class="card-location-icon"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    სიონის მონასტერი
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="timeline-step reveal">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-card" data-popup="2">
+                                <h3>ხელის მოწერა</h3>
+                                <p class="card-location">
+                                    <svg
+                                        class="card-location-icon"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    ქორწინების სახლი
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="timeline-step reveal">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-card" data-popup="3">
+                                <h3>ვახშამი</h3>
+                                <p class="card-location">
+                                    <svg
+                                        class="card-location-icon"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    რესტორანი ქართლი
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- RSVP -->
+                <section class="rsvp-section" id="rsvp">
+                    <div class="reveal">
+                        <p class="section-label">დადასტურება</p>
+                        <div class="section-divider"></div>
+                        <h2 class="section-heading">დაადასტურეთ დასწრება</h2>
+                    </div>
+                    <div class="rsvp-form-wrapper reveal">
+                        <form class="rsvp-form" id="rsvp-form" novalidate>
+                            <div class="rsvp-field">
+                                <label class="rsvp-label" for="rsvp-name">სახელი და გვარი</label>
+                                <input
+                                    class="rsvp-input"
+                                    type="text"
+                                    id="rsvp-name"
+                                    name="name"
+                                    placeholder="თქვენი სახელი"
+                                    required
+                                >
+                            </div>
+                            <div class="rsvp-field">
+                                <label class="rsvp-label">დასწრება</label>
+                                <div class="rsvp-radio-group">
+                                    <div class="rsvp-radio-card">
+                                        <input
+                                            type="radio"
+                                            name="attendance"
+                                            id="rsvp-yes"
+                                            value="yes"
+                                            required
+                                        >
+                                        <label for="rsvp-yes">✓&nbsp;&nbsp;დავესწრები</label>
+                                    </div>
+                                    <div class="rsvp-radio-card">
+                                        <input
+                                            type="radio"
+                                            name="attendance"
+                                            id="rsvp-no"
+                                            value="no"
+                                        >
+                                        <label for="rsvp-no">✕&nbsp;&nbsp;ვერ დავესწრები</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rsvp-field">
+                                <label class="rsvp-label" for="rsvp-guests">თანმხლები პირების რაოდენობა</label>
+                                <input
+                                    class="rsvp-input"
+                                    type="number"
+                                    id="rsvp-guests"
+                                    name="guests"
+                                    min="0"
+                                    max="10"
+                                    placeholder="0"
+                                >
+                            </div>
+                            <button type="submit" class="rsvp-submit">გაგზავნა</button>
+                        </form>
+                        <div class="rsvp-success" id="rsvp-success">
+                            <div class="rsvp-success-icon">✦</div>
+                            <h3>გმადლობთ!</h3>
+                            <p>თქვენი პასუხი მიღებულია!</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- LOCATION / MAP -->
+                <section class="location-section" id="location">
+                    <div class="reveal">
+                        <p class="section-label">ლოკაცია</p>
+                        <div class="section-divider"></div>
+                        <h2 class="section-heading">სად გელოდებით</h2>
+                    </div>
+                    <div class="location-list">
+                        <!-- Place 1 -->
+                        <div class="location-item reveal">
+                            <div class="location-info">
+                                <span class="location-number">01 — ჯვრისწერა</span>
+                                <h3 class="location-name">სიონის მონასტერი</h3>
+                                <p class="location-desc">
+                                    თბილისი, სიონის ქ. 8
+                                    <br>
+                                    14:00 საათი
+                                </p>
+                            </div>
+                            <a
+                                class="location-map-link"
+                                href="https://maps.google.com/?q=Sioni+Cathedral+Tbilisi"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313.4020562188264!2d44.80729121290885!3d41.69133122185112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440d00666461d1%3A0xfbe81df846085837!2sSioni%20Cathedral!5e1!3m2!1sen!2sge!4v1776992308901!5m2!1sen!2sge"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="სიონის მონასტერი"
+                                ></iframe>
+                                <span class="location-map-hint">გახსნა რუკაზე ↗</span>
+                            </a>
+                        </div>
+                        <!-- Place 2 -->
+                        <div class="location-item reveal">
+                            <div class="location-info">
+                                <span class="location-number">02 — ხელის მოწერა</span>
+                                <h3 class="location-name">ქორწინების სახლი</h3>
+                                <p class="location-desc">
+                                    თბილისი, დიმიტრი უზნაძის 2
+                                    <br>
+                                    15:00 საათი
+                                </p>
+                            </div>
+                            <a
+                                class="location-map-link"
+                                href="https://maps.google.com/?q=Marriage+Palace+Tbilisi"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.0387779769753!2d44.79452098999173!3d41.70404229716134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cdef7631887%3A0xa3996e8ab15d5a0d!2sWedding%20venue!5e1!3m2!1sen!2sge!4v1776992887922!5m2!1sen!2sge"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="ქორწინების სახლი"
+                                ></iframe>
+                                <span class="location-map-hint">გახსნა რუკაზე ↗</span>
+                            </a>
+                        </div>
+                        <!-- Place 3 -->
+                        <div class="location-item reveal">
+                            <div class="location-info">
+                                <span class="location-number">03 — ვახშამი</span>
+                                <h3 class="location-name">რესტორანი ქართლი</h3>
+                                <p class="location-desc">
+                                    თბილისი, ქერჩის ქუჩა 7
+                                    <br>
+                                    18:00 საათი
+                                </p>
+                            </div>
+                            <a
+                                class="location-map-link"
+                                href="https://maps.google.com/?q=Restaurant+Kartli+Tbilisi"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.1627714957135!2d44.80432747608023!3d41.79240457125127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446c4a8057f627%3A0x1b7cd56d39cf4243!2sKartli!5e1!3m2!1sen!2sge!4v1776992800990!5m2!1sen!2sge"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="რესტორანი ქართლი"
+                                ></iframe>
+                                <span class="location-map-hint">გახსნა რუკაზე ↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <a
+                    href="https://www.instagram.com/weddsites/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-credit"
+                >
+                    <img src="weddsite.png" alt="Weddsite" class="footer-logo">
+                    <span>Made with ♥ by Weddsite</span>
+                </a>
+            </footer>
+            <div class="envelope-parent" id="envelope">
+                <div class="wax">
+                    <img src="wax.png" alt="">
+                </div>
+                <div class="envelope-part top"></div>
+                <div class="envelope-part right"></div>
+                <div class="envelope-part bottom"></div>
+                <div class="envelope-part left"></div>
+            </div>
+        </main>
+        <!-- Timeline popups -->
+        <div class="popup-overlay" id="popup-overlay">
+            <div
+                class="popup"
+                id="popup-box"
+                role="dialog"
+                aria-modal="true"
+            >
+                <p class="popup-title" id="popup-title"></p>
+                <p class="popup-location" id="popup-location"></p>
+                <p class="popup-body" id="popup-body"></p>
+                <button class="popup-close" id="popup-close">დახურვა &times;</button>
+            </div>
+        </div>
+        <script>
+            history.scrollRestoration = 'manual';
+            window.scrollTo(0, 0);
+
+            // Day/Night toggle
+            document.getElementById('day-night-toggle').addEventListener('click', function () {
+                document.body.classList.toggle('night-mode');
+            });
+
+            // Countdown
+            (function () {
+                var weddingDate = new Date('2026-05-16T14:00:00+04:00').getTime();
+                var cdDays = document.getElementById('cd-days');
+                var cdHours = document.getElementById('cd-hours');
+                var cdMinutes = document.getElementById('cd-minutes');
+                var cdSeconds = document.getElementById('cd-seconds');
+
+                function pad(n) { return n < 10 ? '0' + n : n; }
+
+                function updateCountdown() {
+                    var now = Date.now();
+                    var diff = weddingDate - now;
+                    if (diff <= 0) {
+                        cdDays.textContent = '0';
+                        cdHours.textContent = '00';
+                        cdMinutes.textContent = '00';
+                        cdSeconds.textContent = '00';
+                        clearInterval(timer);
+                        return;
+                    }
+                    var d = Math.floor(diff / 86400000);
+                    var h = Math.floor((diff % 86400000) / 3600000);
+                    var m = Math.floor((diff % 3600000) / 60000);
+                    var s = Math.floor((diff % 60000) / 1000);
+                    cdDays.textContent = d;
+                    cdHours.textContent = pad(h);
+                    cdMinutes.textContent = pad(m);
+                    cdSeconds.textContent = pad(s);
+                }
+
+                updateCountdown();
+                var timer = setInterval(updateCountdown, 1000);
+            })();
+
+            // Envelope open
+            document.getElementById('envelope').addEventListener('click', function () {
+                this.classList.add('open');
+                // Show background immediately so it's visible behind opening envelope
+                document.getElementById('page-contents').classList.add('bg-visible');
+
+                // Fade in content after delay
+                setTimeout(function () {
+                    document.documentElement.style.scrollbarGutter = 'stable';
+                    document.body.style.overflow = 'auto';
+                    requestAnimationFrame(function () {
+                        document.documentElement.classList.add('scrollable');
+                    });
+                    document.getElementById('page-contents').classList.add('content-revealed');
+                    document.getElementById('day-night-toggle').classList.add('visible');
+                }, 1200);
+            });
+
+            // Hamburger menu
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+            function openMobileMenu() {
+                hamburger.classList.add('active');
+                mobileMenu.classList.add('open');
+                document.body.classList.add('menu-open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenu() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                document.body.classList.remove('menu-open');
+                document.body.style.overflow = 'auto';
+            }
+
+            hamburger.addEventListener('click', function () {
+                if (mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu on link click
+            mobileMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Parallax on scroll
+            var heroBgs = document.querySelectorAll('.hero-bg');
+
+            function handleParallax() {
+                var scrollY = window.pageYOffset;
+
+                // Hero background parallax (moves at 40% scroll speed)
+                heroBgs.forEach(function (bg) {
+                    bg.style.transform = 'translateY(' + (scrollY * 0.4) + 'px)';
+                });
+            }
+
+            window.addEventListener('scroll', function () {
+                requestAnimationFrame(handleParallax);
+            });
+
+            // Scroll reveal
+            const revealElements = document.querySelectorAll('.reveal');
+
+            function checkReveal() {
+                var windowHeight = window.innerHeight;
+                revealElements.forEach(function (el) {
+                    var top = el.getBoundingClientRect().top;
+                    if (top < windowHeight - 80) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkReveal);
+            window.addEventListener('resize', checkReveal);
+            // Initial check after envelope opens
+            document.getElementById('envelope').addEventListener('transitionend', checkReveal);
+
+            // Timeline popups
+            var popupData = {
+                '1': {
+                    title: 'ჯვრისწერა',
+                    location: 'სიონის მონასტერი',
+                    body: 'ჯვრისწერა გაიმართება სიონის მონასტერში. გთხოვთ, 14:00 საათისთვის იყოთ ადგილზე.'
+                },
+                '2': {
+                    title: 'ხელის მოწერა',
+                    location: 'ქორწინების სახლი',
+                    body: 'ხელის მოწერის ცერემონია გაიმართება ქორწინების სახლში 15:00 საათზე .'
+                },
+                '3': {
+                    title: 'ვახშამი',
+                    location: 'რესტორანი ქართლი',
+                    body: 'ვახშამი დაიწყება 18:00 საათზე რესტორან ქართლში.'
+                }
+            };
+
+            var popupOverlay = document.getElementById('popup-overlay');
+            var popupTitle = document.getElementById('popup-title');
+            var popupLocation = document.getElementById('popup-location');
+            var popupBody = document.getElementById('popup-body');
+
+            function openPopup(id) {
+                var data = popupData[id];
+                if (!data) return;
+                popupTitle.textContent = data.title;
+                popupLocation.textContent = data.location;
+                popupBody.textContent = data.body;
+                popupOverlay.classList.add('active');
+            }
+
+            function closePopup() {
+                popupOverlay.classList.remove('active');
+            }
+
+            document.querySelectorAll('.timeline-card').forEach(function (card) {
+                card.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    openPopup(this.dataset.popup);
+                });
+            });
+
+            document.getElementById('popup-box').addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+
+            document.getElementById('popup-close').addEventListener('click', closePopup);
+
+            popupOverlay.addEventListener('click', closePopup);
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closePopup();
+            });
+
+            // RSVP form
+            var rsvpForm = document.getElementById('rsvp-form');
+            var rsvpSuccess = document.getElementById('rsvp-success');
+            var rsvpMealField = document.getElementById('rsvp-meal-field');
+
+            document.querySelectorAll('input[name="attendance"]').forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    rsvpMealField.style.display = this.value === 'yes' ? 'flex' : 'none';
+                });
+            });
+            rsvpMealField.style.display = 'none';
+
+            rsvpForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                rsvpForm.style.display = 'none';
+                rsvpSuccess.classList.add('visible');
+            });
+        </script>
+    </body>
+</html>

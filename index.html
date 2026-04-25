@@ -580,19 +580,60 @@
             // RSVP form
             var rsvpForm = document.getElementById('rsvp-form');
             var rsvpSuccess = document.getElementById('rsvp-success');
-            var rsvpMealField = document.getElementById('rsvp-meal-field');
+            var rsvpSubmitButton = rsvpForm.querySelector('.rsvp-submit');
+            var RSVP_API_URL = 'https://weddsites-backend.vercel.app/api/rsvp';
+            var RSVP_PROJECT_ID = 'salome-nika-2026';
 
-            document.querySelectorAll('input[name="attendance"]').forEach(function (radio) {
-                radio.addEventListener('change', function () {
-                    rsvpMealField.style.display = this.value === 'yes' ? 'flex' : 'none';
-                });
-            });
-            rsvpMealField.style.display = 'none';
-
-            rsvpForm.addEventListener('submit', function (e) {
+            rsvpForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                rsvpForm.style.display = 'none';
-                rsvpSuccess.classList.add('visible');
+
+                var fullName = document.getElementById('rsvp-name').value.trim();
+                var attendanceInput = document.querySelector('input[name="attendance"]:checked');
+                var guestCountRaw = document.getElementById('rsvp-guests').value.trim();
+
+                if (!fullName || !attendanceInput) {
+                    alert('გთხოვთ შეავსოთ ყველა სავალდებულო ველი.');
+                    return;
+                }
+
+                var nameParts = fullName.split(/\s+/).filter(Boolean);
+                var firstName = nameParts.shift() || '';
+                var surname = nameParts.join(' ');
+                var requestBody = {
+                    projectId: RSVP_PROJECT_ID,
+                    name: firstName,
+                    surname: surname,
+                    attendance: attendanceInput.value
+                };
+
+                if (guestCountRaw !== '') {
+                    requestBody.guestCount = Number(guestCountRaw);
+                }
+
+                rsvpSubmitButton.disabled = true;
+                rsvpSubmitButton.textContent = 'იგზავნება...';
+
+                try {
+                    var response = await fetch(RSVP_API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(requestBody)
+                    });
+                    var result = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(result && result.error ? result.error : 'RSVP submit failed');
+                    }
+
+                    rsvpForm.style.display = 'none';
+                    rsvpSuccess.classList.add('visible');
+                } catch (error) {
+                    alert('დაფიქსირდა შეცდომა. გთხოვთ თავიდან სცადოთ.');
+                    console.error('RSVP submit error:', error);
+                } finally {
+                    rsvpSubmitButton.disabled = false;
+                    rsvpSubmitButton.textContent = 'გაგზავნა';
+                }
             });
         </script>
     </body>
